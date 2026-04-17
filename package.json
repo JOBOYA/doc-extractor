@@ -1,6 +1,6 @@
 {
   "name": "doc-extractor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Doc extraction UI + Claude Code integration — crawl any docs site and query it with Claude",
   "bin": {
     "doc-extractor": "./bin/cli.js"
@@ -14,6 +14,7 @@
     "lib/",
     ".next/standalone/",
     ".next/static/",
+    "scripts/",
     "next.config.mjs",
     "tailwind.config.ts",
     "tsconfig.json",
@@ -24,6 +25,7 @@
     "build": "next build",
     "start": "next start -p 3000",
     "mcp": "node mcp/server.js",
+    "postbuild": "node scripts/postbuild.js",
     "prepublishOnly": "cross-env NODE_ENV=production next build"
   },
   "dependencies": {
