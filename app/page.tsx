@@ -17,8 +17,8 @@ type Tab = 'reader' | 'history';
 
 function ExtractorInner() {
   const params = useSearchParams();
-  const autoUrl = params.get('url') ?? '';
-  const autoRun = params.get('auto') === '1';
+  const autoUrl = params?.get('url') ?? '';
+  const autoRun = params?.get('auto') === '1';
 
   const [events, setEvents] = useState<ActivityEvent[]>([]);
   const [pages, setPages] = useState<ExtractedPage[]>([]);
