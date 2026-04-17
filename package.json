@@ -1,6 +1,6 @@
 {
   "name": "doc-extractor",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Doc extraction UI + Claude Code integration — crawl any docs site and query it with Claude",
   "bin": {
     "doc-extractor": "./bin/cli.js"

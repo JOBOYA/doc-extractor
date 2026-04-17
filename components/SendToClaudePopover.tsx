@@ -70,19 +70,17 @@ export function SendToClaudePopover({
     }
   };
 
-  const triggerClasses =
-    variant === 'toolbar'
-      ? 'flex items-center gap-1.5 h-7 px-2.5 rounded-md text-[11px] font-medium transition-colors bg-accent/15 text-accent-muted hover:bg-accent/25'
-      : 'flex items-center gap-1.5 h-7 px-2.5 rounded-md text-[11px] font-medium transition-colors bg-accent/15 text-accent-muted hover:bg-accent/25';
-
   return (
     <div className="relative" ref={popoverRef}>
       <button
         onClick={() => setOpen((o) => !o)}
-        className={cn(triggerClasses, open && 'bg-accent/30 text-white')}
+        title="Send to Claude"
+        className={cn(
+          'flex items-center justify-center h-8 w-8 rounded-md transition-colors bg-zinc-900 hover:bg-zinc-800',
+          open && 'bg-zinc-800'
+        )}
       >
-        <ClaudeIcon className="text-accent-muted" size={14} />
-        Send to Claude
+        <ClaudeIcon className="text-white" size={20} />
       </button>
 
       {open && (
